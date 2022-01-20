@@ -1,0 +1,18 @@
+{
+    "name": "murtaza.vohra/vechain_sdk",
+    "description": "VeChain SDK. APIs to create token, hash and generate VID.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "VeChainSDK\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Murtaza Vohra",
+            "email": "murtaza@alchemytech.ca"
+        }
+    ],
+    "require": {}
+}
