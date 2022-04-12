@@ -38,14 +38,6 @@ class VeChainSDK
         $response = curl_exec($ch);
         $response = json_decode($response);
 
-        $ve_chain_response_log = 've chain token response...' . PHP_EOL . PHP_EOL;
-        file_put_contents('./log_' . date('j.n.Y') . '.log', $ve_chain_response_log, FILE_APPEND);
-
-        if (curl_errno($ch)) {
-            $ve_chain_error_log = 've chain token error... ' . PHP_EOL . PHP_EOL;
-            file_put_contents('./log_' . date('j.n.Y') . '.log', $ve_chain_error_log, FILE_APPEND);
-        }
-
         curl_close($ch);
 
         return $response;
@@ -76,14 +68,6 @@ class VeChainSDK
 
         $response = curl_exec($ch);
         $response = json_decode($response);
-
-        $ve_chain_response_log = 've chain generate vid response...' . PHP_EOL . PHP_EOL;
-        file_put_contents('./ve_chain_sdk.log', $ve_chain_response_log, FILE_APPEND);
-
-        if (curl_errno($ch)) {
-            $ve_chain_error_log = 've chain generate vid error... ' . PHP_EOL . PHP_EOL;
-            file_put_contents('./ve_chain_sdk.log', $ve_chain_error_log, FILE_APPEND);
-        }
 
         curl_close($ch);
 
@@ -121,14 +105,6 @@ class VeChainSDK
 
         $response = curl_exec($ch);
         $response = json_decode($response);
-
-        $ve_chain_response_log = 've chain create hash response...' . PHP_EOL . PHP_EOL;
-        file_put_contents('./ve_chain_sdk.log', $ve_chain_response_log, FILE_APPEND);
-
-        if (curl_errno($ch)) {
-            $ve_chain_error_log = 've chain create hash error... ' . PHP_EOL . PHP_EOL;
-            file_put_contents('./ve_chain_sdk.log', $ve_chain_error_log, FILE_APPEND);
-        }
 
         curl_close($ch);
 
